@@ -1,11 +1,12 @@
 # freecad-doc
 
-## Lavori in Corso!!!
+
+Trovere in **listati** i listati citati nel testo, in genere il nome è riportato nel listato stesso
 
 
 Documenti presenti:
 
-- Guida allo Scripting in FreeCAD.
+- Guida allo Scripting in FreeCAD - Bozza del documento.
 
 ***
 
