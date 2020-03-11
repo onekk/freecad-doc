@@ -22,6 +22,7 @@ scripts_path = os.path.join(os.path.dirname(__file__),)
 sys.path.append(scripts_path)
 
 import GfcMod as GFC
+
 importlib.reload(GFC)
 
 DOC = FreeCAD.activeDocument()
@@ -93,3 +94,4 @@ def sardine(nome, lung, prof, alt, raggio, spess):
 sardine("scatola", 30, 20, 10, 5, 1)
 
 setview()
+

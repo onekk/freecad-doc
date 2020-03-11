@@ -1,5 +1,5 @@
 #
-"""rif-cost2.py
+"""cubo-prova.py
 
    This code was written as an sample code 
    for "FreeCAD Scripting Guide" 
@@ -26,10 +26,8 @@ def clear_doc():
 
 def setview():
     """Rearrange View"""
-
-    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
-    FreeCAD.Gui.activeDocument().activeView().setAxisCross(True)
     FreeCAD.Gui.SendMsgToActiveView("ViewFit")
+    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
 
 
 if DOC is None:
@@ -47,27 +45,15 @@ EPS = 0.10
 EPS_C = EPS * -0.5
 
 
-def cubo(nome, lung, larg, alt, cent = False, off_z = 0):
+def cubo(nome, lung, larg, alt):
     obj_b = DOC.addObject("Part::Box", nome)
     obj_b.Length = lung
     obj_b.Width = larg
     obj_b.Height = alt
-    
-    if cent == True:
-        posiz = Vector(lung * -0.5, larg * -0.5, off_z)
-    else:
-        posiz = Vector(0, 0, off_z)
-
-    obj_b.Placement = FreeCAD.Placement(
-        posiz, 
-        FreeCAD.Rotation(0, 0, 0),
-        FreeCAD.Vector(0,0,0)
-        )
 
     DOC.recompute()
 
     return obj_b
-
 
 def base_cyl(nome, ang, rad, alt ):
     obj = DOC.addObject("Part::Cylinder", nome)
@@ -80,24 +66,7 @@ def base_cyl(nome, ang, rad, alt ):
     return obj   
 
 
-def cut_obj(nome, obj_0, obj_1):
-    obj = DOC.addObject("Part::Cut", nome)
-    obj.Base = obj_0
-    obj.Tool = obj_1
-    obj.Refine = True
-    DOC.recompute()
-
-    return obj
-
-
-obj1 = cubo("cubo_cyl", 10, 20, 10, True, 10)
-obj2 = base_cyl("cilindro", 360, 2.5, 15 )
-
-obj_f = cut_obj("cubo_cyl", obj1, obj2)
-
-print("Oggetto finale = ", obj_f.Placement)
-print("Cubo Base = ", obj1.Placement) 
-print("Cilindro = ", obj2.Placement) 
-
+obj = cubo("cubo_di_prova", 5, 5, 5)
 
 setview()
+

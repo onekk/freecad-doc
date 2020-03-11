@@ -2,7 +2,7 @@
 """sc-base.py
 
    This code was written as an sample code 
-   in "FreeCAD Scripting Guide" 
+   for "FreeCAD Scripting Guide" 
      
    Author: Carlo Dormeletti
    Copyright: 2020
@@ -43,3 +43,4 @@ else:
 # EPS= tolerance to uset to cut the parts
 EPS = 0.10
 EPS_C = EPS * -0.5
+

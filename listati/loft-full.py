@@ -1,5 +1,5 @@
 #
-"""ext-full.py
+"""rev-full.py
 
    This code was written as an sample code 
    for "FreeCAD Scripting Guide" 
@@ -40,14 +40,14 @@ else:
 
     clear_doc()
 
-# EPS= tolerance to uset to cut the parts
+# EPS= tolerance to use to cut the parts
 EPS = 0.10
 EPS_C = EPS * -0.5
 
 def reg_poly(center=Vector(0, 0, 0), sides=6, dia=6,
              align=0, outer=1):
     """
-    This return a polygonal shape
+    This return a polygonal face
 
     Keywords Arguments:
         center   - Vector holding the center of the polygon
@@ -56,8 +56,8 @@ def reg_poly(center=Vector(0, 0, 0), sides=6, dia=6,
                      (aphotem or externa diameter)
         align    - 0 or 1 it try to align the base with one axis
         outer    - 0: aphotem 1: outer diameter (default 1)
-    """
 
+    """
 
     ang_dist = pi / sides
 
@@ -83,38 +83,90 @@ def reg_poly(center=Vector(0, 0, 0), sides=6, dia=6,
     obj = Part.makePolygon(vertex)
     wire = Part.Wire(obj)
     poly_f = Part.Face(wire)
-
-    return poly_f
+ 
+    return poly_f 
 
 
 def dado(nome, dia, spess):
-    polyg = reg_poly(Vector(0, 0, 0), 6, dia, 0, 0)
+    poly_f = reg_poly(Vector(0, 0, 0), 6, dia, 0, 0)
 
     nut = DOC.addObject("Part::Feature", nome + "_dado")
-    nut.Shape = polyg.extrude(Vector(0, 0, spess))
+    nut.Shape = poly_f.extrude(Vector(10, 5, spess))
 
     return nut
 
 
-def estr_comp(nome, spess):
-    vertex = ((-2,0,0), (-1, 2, 0), (1, 2, 0), (1, 0, 0),
-              (0, -2, 0), (-2,0,0))
+def point(nome, pos, pt_r = 0.25, color = (0.85, 0.0, 0.00),
+        tr = 0):  
+    """draw a point for reference"""
+    rot_p = DOC.addObject("Part::Sphere", nome)
+    rot_p.Radius = pt_r
+    rot_p.Placement = FreeCAD.Placement(
+        pos, FreeCAD.Rotation(0,0,0), Vector(0,0,0))
+    rot_p.ViewObject.ShapeColor = color
+    rot_p.ViewObject.Transparency = tr
 
-    obj = Part.makePolygon(vertex)
-    wire = Part.Wire(obj)
-    poly_f = Part.Face(wire)
+    DOC.recompute()
 
-    cexsh = DOC.addObject("Part::Feature", nome)
-    cexsh.Shape = poly_f.extrude(Vector(0, 0, spess))
+    return rot_p
+
+
+def manico(nome):
+    """Revolve a face"""
+    face = reg_poly(Vector(0, 0, 0), 6, 5.5, 0, 0)
+    # base point of the rotation axis
+    pos = Vector(0,10,0)
+    # direction of the rotation axis
+    vec = Vector(1,0,1)
+    angle = 360 # Rotation angle
+
+    point("punto_rot", pos)
+
+    obj = DOC.addObject("Part::Feature", nome)
+    obj.Shape = face.revolve(pos, vec, angle)
+
+    DOC.recompute()
+
+    return obj
+
+
+def loft(nome):
+    """Loft a face"""
+    faces = []
+    faces.append(reg_poly(Vector(0, 0, 0), 6, 5.5, 0, 0))
+    faces.append(reg_poly(Vector(0, 0, 0), 6, 5.5, 0, 0))
+    faces.append(reg_poly(Vector(0, 0, 0), 6, 8, 0, 0))
+    faces.append(reg_poly(Vector(0, 0, 0), 6, 5.5, 0, 0))
+    faces.append(reg_poly(Vector(0, 0, 0), 6, 5.5, 0, 0))
+
+    sections = []
+
+    for idx, face in enumerate(faces):
+        sect = DOC.addObject(
+            "Part::Feature",
+             nome + "_sezione_" + str(idx))
+        sect.Shape = face
+        sect.Placement = FreeCAD.Placement(
+            Vector(0,0, 25 * idx),
+            FreeCAD.Rotation(0,0,0), Vector(0,0,0))
+        sections.append(sect)
+
+    obj = DOC.addObject("Part::Loft", nome)
+    obj.Sections=sections
+    obj.Solid = False
+    obj.Ruled = True
+    obj.Closed = False
+    obj.MaxDegree = 10
+
+    DOC.recompute()
     
-    return cexsh
+    print(obj.Placement)
+    return obj
 
 
 # definizione oggetti
 
-dado("Dado", 5.5, 10)
-
-#estr_comp("complesso", 10)
+loft("Loft")
 
 setview()
 

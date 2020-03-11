@@ -113,3 +113,4 @@ obj1 = base_cyl('primo cilindro', 360,2,10)
 int_obj("cubo-cyl-is", obj, obj1)
 
 setview()
+

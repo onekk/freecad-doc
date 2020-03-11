@@ -40,19 +40,9 @@ else:
 
     clear_doc()
 
-def point(nome, pos, pt_r = 0.25, color = (0.85, 0.0, 0.00),
-        tr = 0):  
-    """draw a point for reference"""
-    rot_p = DOC.addObject("Part::Sphere", nome)
-    rot_p.Radius = pt_r
-    rot_p.Placement = FreeCAD.Placement(
-        pos, FreeCAD.Rotation(0,0,0), Vector(0,0,0))
-    rot_p.ViewObject.ShapeColor = color
-    rot_p.ViewObject.Transparency = tr
-
-    DOC.recompute()
-
-    return rot_p
+# EPS= tolerance to use to cut the parts
+EPS = 0.10
+EPS_C = EPS * -0.5
 
 def reg_poly(center=Vector(0, 0, 0), sides=6, dia=6,
              align=0, outer=1):
@@ -97,11 +87,6 @@ def reg_poly(center=Vector(0, 0, 0), sides=6, dia=6,
     return poly_f 
 
 
-# EPS= tolerance to use to cut the parts
-EPS = 0.10
-EPS_C = EPS * -0.5
-
-
 def dado(nome, dia, spess):
     poly_f = reg_poly(Vector(0, 0, 0), 6, dia, 0, 0)
 
@@ -111,14 +96,29 @@ def dado(nome, dia, spess):
     return nut
 
 
+def point(nome, pos, pt_r = 0.25, color = (0.85, 0.0, 0.00),
+        tr = 0):  
+    """draw a point for reference"""
+    rot_p = DOC.addObject("Part::Sphere", nome)
+    rot_p.Radius = pt_r
+    rot_p.Placement = FreeCAD.Placement(
+        pos, FreeCAD.Rotation(0,0,0), Vector(0,0,0))
+    rot_p.ViewObject.ShapeColor = color
+    rot_p.ViewObject.Transparency = tr
+
+    DOC.recompute()
+
+    return rot_p
+
+
 def manico(nome):
     """Revolve a face"""
     face = reg_poly(Vector(0, 0, 0), 6, 5.5, 0, 0)
     # base point of the rotation axis
     pos = Vector(0,10,0)
     # direction of the rotation axis
-    vec = Vector(1,0,0)
-    angle = 180 # Rotation angle
+    vec = Vector(1,0,1)
+    angle = 360 # Rotation angle
 
     point("punto_rot", pos)
 
