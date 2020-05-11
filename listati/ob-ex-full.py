@@ -7,44 +7,13 @@
    Author: Carlo Dormeletti
    Copyright: 2020
    Licence: CC BY-NC-ND 4.0 IT 
+
+    Attenzione: Questo listato va usato aggiungeno le linee 
+    da 18 in poi al codice presente in sc-base.py
+
+    Warning: This code has to be adding the lines starting
+    from 18 to the code in sc-base.py
 """
-
-import FreeCAD
-from FreeCAD import Base, Vector
-import Part
-from math import pi, sin, cos
-
-DOC = FreeCAD.activeDocument()
-DOC_NAME = "Pippo"
-
-def clear_doc():
-    """
-    Clear the active document deleting all the objects
-    """
-    for obj in DOC.Objects:
-        DOC.removeObject(obj.Name)
-
-def setview():
-    """Rearrange View"""
-    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
-    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
-    FreeCAD.Gui.activeDocument().activeView().setAxisCross(True)
-
-
-if DOC is None:
-    FreeCAD.newDocument(DOC_NAME)
-    FreeCAD.setActiveDocument(DOC_NAME)
-    DOC = FreeCAD.activeDocument()
-
-else:
-
-    clear_doc()
-
-
-# EPS= tolerance to uset to cut the parts
-EPS = 0.10
-EPS_C = EPS * -0.5
-
 
 def cubo(nome, lung, larg, alt):
     obj_b = DOC.addObject("Part::Box", nome)
