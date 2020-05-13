@@ -6,7 +6,7 @@ Trovere in **listati** i listati citati nel testo, in genere il nome è riportat
 
 Documenti presenti:
 
-- file GFC-v0_30.pdf -- Guida allo Scripting in FreeCAD versione 0.30 - Bozza
+- file GFC-v0_31.pdf -- Guida allo Scripting in FreeCAD versione 0.31 - Bozza - (piccole correzioni di errori) 
 
 
 
