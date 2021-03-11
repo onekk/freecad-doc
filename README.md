@@ -9,7 +9,7 @@ Documenti presenti:
 - file GFC-v0_31.pdf -- Guida allo Scripting in FreeCAD versione 0.31 - Bozza - (piccole correzioni di errori) 
 
 
-###Se vuoi supportare questo progetto:
+### Se vuoi supportare questo progetto:
 
 [Link Paypal.me](https://paypal.me/FCSguidait?locale.x=it_IT)
 
