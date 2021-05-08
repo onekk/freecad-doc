@@ -8,7 +8,9 @@ Documenti presenti:
 
 - file GFC-v0_31.pdf -- Guida allo Scripting in FreeCAD versione 0.31 - Bozza - (piccole correzioni di errori).
 
-- file GFC-v0_40beta.pdf -- Guida allo Scripting in FreeCAD versione 0.40 - Bozza - (Nuova versione con minime modifiche, riferimento alla versione stabile 0.19 e alcuni miglioramenti nelle spiegazioni dei concetti di base) 
+- file GFC-v0_40beta.pdf -- Guida allo Scripting in FreeCAD versione 0.40 - Bozza - (Nuova versione con minime modifiche, riferimento alla versione stabile 0.19 e alcuni miglioramenti nelle spiegazioni dei concetti di base)
+
+- file GFC-v0_50alpha.pdf -- Guida allo Scripting in FreeCAD versione 0.50 - Bozza - (Nuova versione con importanti modifiche riguardanti la topologia e la geometria che apportano notevoli miglioramenti nelle spiegazioni dei concetti di base di freecad)  
 
 
 ### Se vuoi supportare questo progetto:
