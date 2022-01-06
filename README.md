@@ -1,5 +1,6 @@
 # freecad-doc
 
+## Italian Guide
 
 Trovere in **listati** i listati citati nel testo, in genere il nome è riportato nel listato stesso
 
@@ -13,9 +14,27 @@ Documenti presenti:
 - file GFC-v0_50alpha.pdf -- Guida allo Scripting in FreeCAD versione 0.50 - Bozza - (Nuova versione con importanti modifiche riguardanti la topologia e la geometria che apportano notevoli miglioramenti nelle spiegazioni dei concetti di base di freecad)  
 
 
+
 ### Se vuoi supportare questo progetto:
 
 [Link Paypal.me](https://paypal.me/FCSguidait?locale.x=it_IT)
+
+
+## English Guide
+
+Listings are not present for now.
+
+
+Documents:
+
+- file GFC-v0_50alpha.pdf -- Guida allo Scripting in FreeCAD versione 0.50 - Bozza - (Nuova versione con importanti modifiche riguardanti la topologia e la geometria che apportano notevoli miglioramenti nelle spiegazioni dei concetti di base di freecad)  
+
+
+### If you want support this project:
+
+[Link Paypal.me](https://paypal.me/FCSguidait?locale.x=it_IT)
+
+
 
 ***
 
@@ -23,7 +42,7 @@ Tutti i materiali contenuti sul sito sono pubblicati sotto licenza:
 
 **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.**
 
-Per vedere una coppia della licenza, visita http://creativecommons.org/licenses/by-nc-nd/4.0/
+Per vedere una copia della licenza, visita http://creativecommons.org/licenses/by-nc-nd/4.0/
 
 o manda una lettera a: Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
