@@ -22,7 +22,7 @@ Documenti presenti:
 
 ## English Guide
 
-Listings are not present for now.
+Listings are presented in "listings".
 
 
 Documents:
