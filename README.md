@@ -2,8 +2,9 @@
 
 ## Italian Guide
 
-Trovere in **listati** i listati citati nel testo, in genere il nome è riportato nel listato stesso
+Trovate tutto nella directory **Italian**
 
+Trovere in **listati** i listati citati nel testo, in **listati**.
 
 Documenti presenti:
 
@@ -22,7 +23,9 @@ Documenti presenti:
 
 ## English Guide
 
-Listings are presented in "listings".
+You will find documentation in **English**
+
+Listings are presented in **listings** subdirectory.
 
 
 Documents:
