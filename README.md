@@ -27,7 +27,7 @@ Listings are not present for now.
 
 Documents:
 
-- file GFC-v0_50alpha.pdf -- Guida allo Scripting in FreeCAD versione 0.50 - Bozza - (Nuova versione con importanti modifiche riguardanti la topologia e la geometria che apportano notevoli miglioramenti nelle spiegazioni dei concetti di base di freecad)  
+- file GFC-Eng_v0_52alpha.pdf -- FreeCAD Scripting Guide version 0.52a - (Incomplete) First Draft of English version of the Guide, it is not like Italian Guide, it is more compact, and probably this "lean format" will be followed by new version of Italia Guide too.
 
 
 ### If you want support this project:
