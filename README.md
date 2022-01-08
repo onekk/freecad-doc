@@ -25,12 +25,12 @@ Documenti presenti:
 
 You will find documentation in **English**
 
-Listings are presented in **listings** subdirectory.
+Program cited in test are presented in **code** subdirectory.
 
 
 Documents:
 
-- file GFC-Eng_v0_52alpha.pdf -- FreeCAD Scripting Guide version 0.52a - (Incomplete) First Draft of English version of the Guide, it is not like Italian Guide, it is more compact, and probably this "lean format" will be followed by new version of Italia Guide too.
+- file GFC-Eng_v0_53alpha.pdf -- FreeCAD Scripting Guide version 0.53a - (Incomplete) Second Draft of English version of the Guide, it is not like Italian Guide, it is more compact, and probably this "lean format" will be followed by new version of Italia Guide too.
 
 
 ### If you want support this project:
