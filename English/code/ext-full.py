@@ -1,4 +1,5 @@
-"""base-objects-full.py
+#
+"""ext-full.py
 
    This code was written as an sample code
    for "FreeCAD Scripting Guide"
@@ -6,6 +7,7 @@
    Author: Carlo Dormeletti
    Copyright: 2022
    Licence: CC BY-NC-ND 4.0 IT
+
 """
 
 import os
@@ -16,7 +18,7 @@ from FreeCAD import Placement, Rotation, Vector
 import Part
 
 
-DOC_NAME = "base_objects"
+DOC_NAME = "extrusion_ex"
 
 def activate_doc():
     """activate document"""
@@ -97,80 +99,33 @@ ROT0 = Rotation(0,0,0)
 
 ### CODE START HERE ###
 
+def base_figure():
+    """Create a polygon."""
+    points = (
+        (0.0, 0.0, 0.0),
+        (15.0, 0.0, 0.0),
+        (15.0, 10.0, 0.0),
+        (0.0, 10.0, 0.0),
+        (0.0, 0.0, 0.0)
+    )
 
-def base_cube(name, lng, wid, hei):
-    obj_b = DOC.addObject("Part::Box", name)
-    obj_b.Length = lng
-    obj_b.Width = wid
-    obj_b.Height = hei
-
-    DOC.recompute()
-
-    return obj_b
-
-def base_cyl(name, ang, rad, hei):
-    obj = DOC.addObject("Part::Cylinder", name)
-    obj.Angle = ang
-    obj.Radius = rad
-    obj.Height = hei
-
-    DOC.recompute()
+    obj = Part.makePolygon(points)
 
     return obj
 
 
-def fuse_obj(name, obj_0, obj_1):
-    obj = DOC.addObject("Part::Fuse", name)
-    obj.Base = obj_0
-    obj.Tool = obj_1
-    obj.Refine = True
-    DOC.recompute()
+obj_o = base_figure()
 
-    return obj
+# Part.show(obj_o, "Wire")
 
+obj_f = Part.Face(obj_o)
 
-def mfuse_obj(name, obj_0, obj_1):
-    obj = DOC.addObject("Part::MultiFuse", name)
-    obj.Shapes = (obj_0, obj_1)
-    obj.Refine = True
-    DOC.recompute()
+# Part.show(obj_f, "Face")
 
-    return obj
+thi = 10
 
+sol_ext = obj_f.extrude(Vector(0, 0, thi))
 
-def cut_obj(name, obj_0, obj_1):
-    obj = DOC.addObject("Part::Cut", name)
-    obj.Base = obj_0
-    obj.Tool = obj_1
-    obj.Refine = True
-    DOC.recompute()
-
-    return obj
-
-
-def int_obj(name, obj_0, obj_1):
-    obj = DOC.addObject("Part::MultiCommon", name)
-    obj.Shapes = (obj_0, obj_1)
-    obj.Refine = True
-    DOC.recompute()
-
-    return obj
-
-
-obj = base_cube("test_cube", 5, 5, 5)
-
-obj_1 = base_cyl('test_cylinder', 360, 2, 10)
-
-f_obj = fuse_obj("fusion-cube-cyl", obj, obj_1)
-f_obj.Placement = Placement(Vector(20, 0, 0), ROT0)
-
-mf_obj = mfuse_obj("multifusion-cube-cyl", obj, obj_1)
-mf_obj.Placement = Placement(Vector(20, 20, 0), ROT0)
-
-c_obj = cut_obj("cut-cube-cyl", obj, obj_1)
-c_obj.Placement = Placement(Vector(40, 0, 0), ROT0)
-
-i_obj = int_obj("is-cube-cyl", obj, obj_1)
-i_obj.Placement = Placement(Vector(40, 20, 0), ROT0)
+Part.show(sol_ext, "Extruded_Solid")
 
 setview()

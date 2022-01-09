@@ -30,7 +30,7 @@ Program cited in test are presented in **code** subdirectory.
 
 Documents:
 
-- file GFC-Eng_v0_53alpha.pdf -- FreeCAD Scripting Guide version 0.53a - (Incomplete) Second Draft of English version of the Guide, it is not like Italian Guide, it is more compact, and probably this "lean format" will be followed by new version of Italia Guide too.
+- file GFC-Eng_v0_54alpha.pdf -- FreeCAD Scripting Guide version 0.54a - (Incomplete) Fourth Draft of English version of the Guide, some code modification and different code for some BREP operations.
 
 
 ### If you want support this project:
