@@ -30,7 +30,10 @@ Program cited in test are presented in **code** subdirectory.
 
 Documents:
 
-- file GFC-Eng_v0_54alpha.pdf -- FreeCAD Scripting Guide version 0.54a - (Incomplete) Fourth Draft of English version of the Guide, some code modification and different code for some BREP operations.
+- file GFC-Eng_v0_55alpha.pdf -- FreeCAD Scripting Guide version 0.55a - (Almost complete) Fifth Draft of English version of the Guide, many improvements around, it is almost complete, it lacks of some chapter, planned are:
+   * Introduction to multifile scripts (programs)
+   * A little primer about GUI interaction.
+   * 3d printing modelling and STL exporting and related arguments. 
 
 
 ### If you want support this project:

@@ -1,4 +1,5 @@
-"""base-objects-full.py
+#
+"""loft-full.py
 
    This code was written as an sample code
    for "FreeCAD Scripting Guide"
@@ -6,6 +7,7 @@
    Author: Carlo Dormeletti
    Copyright: 2022
    Licence: CC BY-NC-ND 4.0 IT
+
 """
 
 import os
@@ -16,7 +18,7 @@ from FreeCAD import Placement, Rotation, Vector
 import Part
 
 
-DOC_NAME = "base_objects"
+DOC_NAME = "loft_ex"
 
 def activate_doc():
     """activate document"""
@@ -97,80 +99,72 @@ ROT0 = Rotation(0,0,0)
 
 ### CODE START HERE ###
 
+def base_figure(dim_x, dim_y):
+    """Create a polygon."""
+    points = (
+        (0.0, 0.0, 0.0),
+        (dim_x, 0.0, 0.0),
+        (dim_x, dim_y, 0.0),
+        (0.0, dim_y, 0.0),
+        (0.0, 0.0, 0.0)
+    )
 
-def base_cube(name, lng, wid, hei):
-    obj_b = DOC.addObject("Part::Box", name)
-    obj_b.Length = lng
-    obj_b.Width = wid
-    obj_b.Height = hei
-
-    DOC.recompute()
-
-    return obj_b
-
-def base_cyl(name, ang, rad, hei):
-    obj = DOC.addObject("Part::Cylinder", name)
-    obj.Angle = ang
-    obj.Radius = rad
-    obj.Height = hei
-
-    DOC.recompute()
+    obj = Part.makePolygon(points)
 
     return obj
 
+# elements hold created wires
+elements = []
 
-def fuse_obj(name, obj_0, obj_1):
-    obj = DOC.addObject("Part::Fuse", name)
-    obj.Base = obj_0
-    obj.Tool = obj_1
-    obj.Refine = True
-    DOC.recompute()
+# dimensions hold values that are (dim_x, dim_y, z height) of generating figures
+dimensions = (
+    (5.0, 5.0, 0.0),
+    (5.0, 5.0, 5.0),
+    (8.0, 8.0, 7.0),
+    (10.0, 10.0, 10.0),
+    (8.0, 8.0, 13.0),
+    (5.0, 5.0, 20.0),
+    (5.0, 5.0, 25.0),
+    )
 
-    return obj
+for dims in dimensions:
+    obj = base_figure(dims[0], dims[1])
+    obj.Placement = Placement(Vector(dims[0] * -0.5, dims[1] * -0.5, dims[2]), ROT0)
+    elements.append(obj)
 
+# makeLoft(list of wires,[solid=False,ruled=False,closed=False,maxDegree=5])
 
-def mfuse_obj(name, obj_0, obj_1):
-    obj = DOC.addObject("Part::MultiFuse", name)
-    obj.Shapes = (obj_0, obj_1)
-    obj.Refine = True
-    DOC.recompute()
+sol_loft = Part.makeLoft(elements, True, True, False, 5)
 
-    return obj
-
-
-def cut_obj(name, obj_0, obj_1):
-    obj = DOC.addObject("Part::Cut", name)
-    obj.Base = obj_0
-    obj.Tool = obj_1
-    obj.Refine = True
-    DOC.recompute()
-
-    return obj
+Part.show(sol_loft, "Loft_Solid")
 
 
-def int_obj(name, obj_0, obj_1):
-    obj = DOC.addObject("Part::MultiCommon", name)
-    obj.Shapes = (obj_0, obj_1)
-    obj.Refine = True
-    DOC.recompute()
+elem2 = []
 
-    return obj
+dims2 = (
+    (8.0, 5.0),
+    (8.0, 7.5),
+    (8.0, 10.0),
+    (8.0, 7.5),
+    (8.0, 5.0),
+    )
 
+idx = 0
 
-obj = base_cube("test_cube", 5, 5, 5)
+for dims in dims2:
+    obj = base_figure(dims[0], dims[1])
+    step = 25
+    pl1 = Placement(Vector(20, 0, 0), Rotation(0, 0, 90))
+    pl2 = Placement(Vector(0, 0, 0), Rotation(step * idx, 0, 0), Vector(0, 0, 0))
+    obj.Placement = pl2.multiply(pl1)
+    # Part.show(obj)
+    elem2.append(obj)
+    idx += 1
 
-obj_1 = base_cyl('test_cylinder', 360, 2, 10)
+# makeLoft(list of wires,[solid=False,ruled=False,closed=False,maxDegree=5])
 
-f_obj = fuse_obj("fusion-cube-cyl", obj, obj_1)
-f_obj.Placement = Placement(Vector(20, 0, 0), ROT0)
+sol_loft2 = Part.makeLoft(elem2, True, False, False, 3)
 
-mf_obj = mfuse_obj("multifusion-cube-cyl", obj, obj_1)
-mf_obj.Placement = Placement(Vector(20, 20, 0), ROT0)
-
-c_obj = cut_obj("cut-cube-cyl", obj, obj_1)
-c_obj.Placement = Placement(Vector(40, 0, 0), ROT0)
-
-i_obj = int_obj("is-cube-cyl", obj, obj_1)
-i_obj.Placement = Placement(Vector(40, 20, 0), ROT0)
+Part.show(sol_loft2, "Loft_Solid_2")
 
 setview()
