@@ -100,7 +100,7 @@ ROT0 = Rotation(0,0,0)
 ### CODE START HERE ###
 
 def base_figure():
-    """Create a polygon."""
+    """Creates a polygon"""
     points = (
         (0.0, 0.0, 0.0),
         (15.0, 0.0, 0.0),
