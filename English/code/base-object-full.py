@@ -1,7 +1,7 @@
 """base-objects-full.py
 
-   This code was written as an sample code 
-   for "FreeCAD Scripting Guide" 
+   This code was written as example code 
+   for the "FreeCAD Scripting Guide" 
      
    Author: Carlo Dormeletti
    Copyright: 2022
@@ -19,7 +19,7 @@ import Part
 DOC_NAME = "base_objects"
 
 def activate_doc():
-    """activate document"""
+    """Activate document"""
     FreeCAD.setActiveDocument(DOC_NAME)
     FreeCAD.ActiveDocument = FreeCAD.getDocument(DOC_NAME)
     FreeCADGui.ActiveDocument = FreeCADGui.getDocument(DOC_NAME)
@@ -27,7 +27,7 @@ def activate_doc():
 
 
 def setview():
-    """Rearrange View"""
+    """Rearrange view"""
     DOC.recompute()
     VIEW.viewAxometric()
     VIEW.setAxisCross(True)
@@ -74,7 +74,7 @@ if FreeCAD.ActiveDocument is None:
 
 # test if there is an active document with a "proper" name
 if FreeCAD.ActiveDocument.Name == DOC_NAME:
-    print("DOC_NAME exist")
+    print("DOC_NAME exists")
 else:
     print("DOC_NAME is not active")
     # test if there is a document with a "proper" name
