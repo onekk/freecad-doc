@@ -100,7 +100,7 @@ ROT0 = Rotation(0,0,0)
 ### CODE START HERE ###
 
 def base_figure(dim_x, dim_y):
-    """Create a polygon."""
+    """Creates a polygon"""
     points = (
         (0.0, 0.0, 0.0),
         (dim_x, 0.0, 0.0),
@@ -116,7 +116,7 @@ def base_figure(dim_x, dim_y):
 # elements hold created wires
 elements = []
 
-# dimensions hold values that are (dim_x, dim_y, z height) of generating figures
+# dimensions hold values that are (dim_x, dim_y, z height) of generated figures
 dimensions = (
     (5.0, 5.0, 0.0),
     (5.0, 5.0, 5.0),
