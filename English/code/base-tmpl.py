@@ -1,7 +1,7 @@
 """base_tmpl.py
 
-   This code was written as an sample code 
-   for "FreeCAD Scripting Guide" 
+   This code was written as example code 
+   for the "FreeCAD Scripting Guide" 
      
    Author: Carlo Dormeletti
    Copyright: 2022
@@ -19,7 +19,7 @@ import Part
 DOC_NAME = "test_file"
 
 def activate_doc():
-    """activate document"""
+    """Activate document"""
     FreeCAD.setActiveDocument(DOC_NAME)
     FreeCAD.ActiveDocument = FreeCAD.getDocument(DOC_NAME)
     FreeCADGui.ActiveDocument = FreeCADGui.getDocument(DOC_NAME)
@@ -27,7 +27,7 @@ def activate_doc():
 
 
 def setview():
-    """Rearrange View"""
+    """Rearrange view"""
     DOC.recompute()
     VIEW.viewAxometric()
     VIEW.setAxisCross(True)
@@ -72,12 +72,12 @@ if FreeCAD.ActiveDocument is None:
     FreeCAD.newDocument(DOC_NAME)
     print("Document: {0} Created".format(DOC_NAME))
 
-# test if there is an active document with a "proper" name
+# tests if there is an active document with the given name
 if FreeCAD.ActiveDocument.Name == DOC_NAME:
-    print("DOC_NAME exist")
+    print("DOC_NAME exists")
 else:
     print("DOC_NAME is not active")
-    # test if there is a document with a "proper" name
+    # tests if there is a document with the given name
     try:
         FreeCAD.getDocument(DOC_NAME)
     except NameError:
@@ -95,4 +95,4 @@ clear_DOC()
 
 ROT0 = Rotation(0,0,0)
 
-### CODE START HERE ###
+### CODE STARTS HERE ###
