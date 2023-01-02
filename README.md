@@ -16,20 +16,24 @@
 
 
 
+## Monografie
+
+Troverete alcune monografie, cioè piccoli articoli, o qualcosa di più su vari argomenti nella sezione:
+
+[https://github.com/onekk/freecad-doc/tree/master/Monographies](https://github.com/onekk/freecad-doc/tree/master/Monographies)
+
+# Monography
+
+You will find some articles or better some monographies about various matters in:
+
+[https://github.com/onekk/freecad-doc/tree/master/Monographies](https://github.com/onekk/freecad-doc/tree/master/Monographies)
+
+
 ## Guida in Italiano
 
 La versione presente in questo sito della guida, che era resa disponibile con licenza "libera", viene ritirata.
 
 Le ragioni sono semplici, non riesco a mantenerla aggiornata in modo gratuito, dato che non mi è arrivata nesuna donazione.
-
-Troverete comunque in:
-
-<kbd>FCSG >> code</kbd> 
-
-il materiale dei listati della versione precedente della guida.
-
-Ancora per qualche tempo.
-
 
 Ho in preparazione una nuova versione della Guida che sarà distribuita e mantenuta aggiornata con nuovo materiale.
 
@@ -41,14 +45,6 @@ Non ho ancora deciso se rendere disponibile la nuova versione solo dopo aver eff
 Old version of my FreeCAD scripting guide that used to be here is removed.
 
 Reason are very simple, I have collect no donations, so I can't maintain it update for free.
-
-You will find in:
-
-<kbd>FCSG >> code</kbd>
-
-code listing for the past version of the guide.
-
-For some time.
 
 I'm preparing a new version of the guide, that will be update and expanded with new material.
 
