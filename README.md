@@ -17,7 +17,7 @@ You will find some articles or better some monographies about various matters in
 
 La versione presente in questo sito della guida, che era resa disponibile con licenza "libera", viene ritirata.
 
-Ho in preparazione una nuova versione della Guida aggiornata con nuovo materiale, ma sarà "venduta" per ad un prezzo modico, chiedete pure se interessati..
+Ho in preparazione una nuova versione della Guida aggiornata con nuovo materiale, ma sarà "venduta" ad un prezzo modico, chiedete pure se interessati..
 
 
 
@@ -67,7 +67,6 @@ To contact me, feel free to use the PM on FreeCAD forum, my nickname is **onekk*
 
 ## Licenza
 
-***
 
 Tutti i materiali contenuti sul sito se non diversamente indicato, sono pubblicati sotto licenza:
 
