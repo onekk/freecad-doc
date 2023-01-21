@@ -1,21 +1,5 @@
 # FreeCAD DOC
 
-> **Se hai trovato utile il materiale presente in questo sito,  per favore fai una donazione attraverso:**
->
-> [Link Paypal.me](https://paypal.me/FCSguidait?locale.x=it_IT)
->
-> Le donazioni saranno usate per inserire nuovo materiale.
-
-
->
-> **If you have found something useful in this site please donate using:**
->
-> [Link Paypal.me](https://paypal.me/FCSguidait?locale.x=it_IT)
->
-> Donations will be used to extend the site with new things.
-
-
-
 ## Monografie
 
 Troverete alcune monografie, cioè piccoli articoli, o qualcosa di più su vari argomenti nella sezione:
@@ -29,39 +13,59 @@ You will find some articles or better some monographies about various matters in
 [https://github.com/onekk/freecad-doc/tree/master/Monographies](https://github.com/onekk/freecad-doc/tree/master/Monographies)
 
 
-## Guida in Italiano
+## Guida allo Scripting in Italiano
 
 La versione presente in questo sito della guida, che era resa disponibile con licenza "libera", viene ritirata.
 
-Le ragioni sono semplici, non riesco a mantenerla aggiornata in modo gratuito, dato che non mi è arrivata nesuna donazione.
-
-Ho in preparazione una nuova versione della Guida che sarà distribuita e mantenuta aggiornata con nuovo materiale.
-
-Non ho ancora deciso se rendere disponibile la nuova versione solo dopo aver effettuato una donazione, oppure se realizzare un vero e proprio libro "a pagamento".
+Ho in preparazione una nuova versione della Guida aggiornata con nuovo materiale, ma sarà "venduta" per ad un prezzo modico, chiedete pure se interessati..
 
 
-## English Guide
 
-Old version of my FreeCAD scripting guide that used to be here is removed.
+## English Scripting Guide 
 
-Reason are very simple, I have collect no donations, so I can't maintain it update for free.
+Here was used to be a version of a FreeCAD scripting guide written by me, now it was removed.
 
-I'm preparing a new version of the guide, that will be update and expanded with new material.
-
-I'm considering if this new version will be released after having done a donation, or if a proper "book" will be sold.
+I'm preparing a new version of the guide, that will be update and expanded with new material, and sold for a cheap amount, feel free to ask for a quote if interested.
 
 
-## Scripting PartDesign
+## Scripting PartDesign (In preparazione)
 
 Troverete un esempio di come sia possibile usare lo scripting anche con Part Design 
 
 [Versione Italiana](https://github.com/onekk/freecad-doc/wiki/Scripting-PartDesign)
 
 
-## PartDesign Scripting
+## PartDesign Scripting (WIP)
 
 
 [English Version](https://github.com/onekk/freecad-doc/wiki/PartDesign-Scripting)
+
+
+To contact me, feel free to use the PM on FreeCAD forum, my nickname is **onekk**, or the Issue on this site.
+
+
+## Donazioni
+
+
+> **Se hai trovato utile il materiale presente in questo sito, per favore fai una donazione attraverso:**
+>
+> [Link Paypal.me](https://paypal.me/FCSguidait?locale.x=it_IT)
+>
+> Le donazioni saranno usate per inserire nuovo materiale.
+
+
+## Donations
+
+
+>
+> **If you have found something useful in this site please donate using:**
+>
+> [Link Paypal.me](https://paypal.me/FCSguidait?locale.x=it_IT)
+>
+> Donations will be used to extend the site with new things.
+
+
+## Licenza
 
 ***
 
@@ -94,7 +98,7 @@ Il licenziante non può revocare questi diritti fintanto che tu rispetti i termi
     
 
 
-***
+## License
 
 All the documents, present in this site, unless otherwise indicated, are licensed under the **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.**
 
