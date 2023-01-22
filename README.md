@@ -65,6 +65,17 @@ To contact me, feel free to use the PM on FreeCAD forum, my nickname is **onekk*
 > Donations will be used to extend the site with new things.
 
 
+## Blog
+
+
+[Blog link](http://onekk-maker.blogspot.com/)
+
+Questo è il mio blog in italiano, forse pià agevole e tratta anche di cose non relative a FreeCAD.
+
+
+To English speakers, sorry my Blog is only in Italian.
+
+
 ## Licenza
 
 
