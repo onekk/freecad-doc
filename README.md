@@ -17,7 +17,7 @@ You will find some articles or better some monographies about various matters in
 
 La versione presente in questo sito della guida, che era resa disponibile con licenza "libera", viene ritirata.
 
-Ho in preparazione una nuova versione della Guida aggiornata con nuovo materiale, ma sarà "venduta" ad un prezzo modico, chiedete pure se interessati..
+Ho in preparazione una nuova versione della Guida aggiornata con nuovo materiale, ma sarà "venduta" ad un prezzo modico, chiedete pure se interessati.
 
 
 
@@ -40,8 +40,6 @@ Troverete un esempio di come sia possibile usare lo scripting anche con Part Des
 
 [English Version](https://github.com/onekk/freecad-doc/wiki/PartDesign-Scripting)
 
-
-To contact me, feel free to use the PM on FreeCAD forum, my nickname is **onekk**, or the Issue on this site.
 
 
 ## Donazioni
@@ -70,10 +68,43 @@ To contact me, feel free to use the PM on FreeCAD forum, my nickname is **onekk*
 
 [Blog link](http://onekk-maker.blogspot.com/)
 
-Questo è il mio blog in italiano, forse pià agevole e tratta anche di cose non relative a FreeCAD.
+Questo è il mio blog in italiano, forse più agevole da leggere e tratta anche di cose non relative a FreeCAD.
 
 
 To English speakers, sorry my Blog is only in Italian.
+
+
+## Imparare FreeCAD
+
+Se siete interessati ad imparare come usare lo scritping ed in genere Python con FreeCAD, chiedete usando le **Informazioni di contatto** qui sotto.
+
+
+## Learning FreeCAD
+
+If you are interested in learning FreeCAD scripting ad more general about using Python with FreeCAD, contact me using **Contact information** below.
+
+
+## Modellazione 3D
+
+
+Se avete qualche esigenza di modellazione 3d chiedete usando le **Informazioni di contatto** qui sotto.
+
+
+## 3D Modelling
+
+If you have need of 3d modelling with FreeCAD,contact me using **Contact information** below.
+
+
+
+## Contact Information.
+
+To contact me, feel free to use the PM on FreeCAD forum, my nickname is **onekk**, or the **Issue** on this site.
+
+
+## Informazione di contatto.
+
+
+Se volete contattarmi, usate pure la PM nel sito di FreeCAD il mio nickname è **onekk** oppure usare le **Issue** in questo sito
 
 
 ## Licenza
