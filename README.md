@@ -76,12 +76,12 @@ To English speakers, sorry my Blog is only in Italian.
 
 ## Imparare FreeCAD
 
-Se siete interessati ad imparare come usare lo scritping ed in genere Python con FreeCAD, chiedete usando le **Informazioni di contatto** qui sotto.
+Se siete interessati ad imparare come usare modellare con FreeCAD o usare Python con FreeCAD, chiedete pure usando le **Informazioni di contatto** qui sotto.
 
 
 ## Learning FreeCAD
 
-If you are interested in learning FreeCAD scripting ad more general about using Python with FreeCAD, contact me using **Contact information** below.
+If you are interested in learning how to use Python with FreeCAD, Scrpting FreeCAD, or more in general model with FreeCAD, contact me using **Contact information** below.
 
 
 ## Modellazione 3D
