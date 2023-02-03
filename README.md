@@ -76,7 +76,7 @@ To English speakers, sorry my Blog is only in Italian.
 
 ## Imparare FreeCAD
 
-Se siete interessati ad imparare come usare modellare con FreeCAD o usare Python con FreeCAD, chiedete pure usando le **Informazioni di contatto** qui sotto.
+Se siete interessati ad imparare come modellare con FreeCAD o usare Python con FreeCAD, chiedete pure usando le **Informazioni di contatto** qui sotto.
 
 
 ## Learning FreeCAD
