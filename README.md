@@ -81,7 +81,7 @@ Se siete interessati ad imparare come modellare con FreeCAD o usare Python con F
 
 ## Learning FreeCAD
 
-If you are interested in learning how to use Python with FreeCAD, Scrpting FreeCAD, or more in general model with FreeCAD, contact me using **Contact information** below.
+If you are interested in learning how to use Python with FreeCAD, Scripting FreeCAD, or more in general model with FreeCAD, contact me using **Contact information** below.
 
 
 ## Modellazione 3D
