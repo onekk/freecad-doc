@@ -167,3 +167,9 @@ The licensor cannot revoke these freedoms as long as you follow the license term
 - **No additional restrictions** — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
 
 
+**NO AI TRAINING:**
+Without in any way limiting the author’s exclusive rights under copyright, any use of this publication to “train” generative artificial intelligence (AI) technologies to generate text or code is expressly prohibited.
+
+The author reserves all rights to license uses of this work for generative AI training and development of machine learning language models.
+
+
